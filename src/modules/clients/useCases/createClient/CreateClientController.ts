@@ -7,7 +7,10 @@ export class CreateClientController {
     const { username, password } = request.body;
 
     const createClientUseCase = new CreateClientUseCase();  
-    const result = await createClientUseCase.execute({ username, password });
+    const result = await createClientUseCase.execute({ 
+      username, 
+      password 
+    });
 
     return response.json(result);
   } 
